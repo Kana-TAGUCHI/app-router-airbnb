@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 
 import { IconType } from 'react-icons';
-import { SafeUser } from '../../type';
+import { SafeUser } from '../../types';
 
 import useCountries from '../../hooks/useCountries';
 import Avatar from '../Avatar';

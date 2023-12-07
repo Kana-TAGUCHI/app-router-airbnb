@@ -1,6 +1,6 @@
 'use client';
 
-import { SafeUser } from '@/app/type';
+import { SafeUser } from '@/app/types';
 import useCountries from '../../hooks/useCountries';
 import Heading from '../Heading';
 import Image from 'next/image';

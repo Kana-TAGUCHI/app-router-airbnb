@@ -7,7 +7,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Range } from 'react-date-range';
 
-import { SafeListing, SafeReservation, SafeUser } from '@/app/type';
+import { SafeListing, SafeReservation, SafeUser } from '@/app/types';
 import useLoginModal from '@/app/hooks/useLoginModal';
 
 import { categories } from '../../components/navbar/Categories';
@@ -74,8 +74,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
       .then(() => {
         toast.success('Reservation created successfully');
         setDateRange(initialDateRange);
-        // Redirect to /trips
-        router.refresh();
+        router.push('/trips');
       })
       .catch(() => {
         toast.error('Something went wrong.');
